@@ -1,13 +1,11 @@
 A1
 Muveks
-Takrida
 EP-invest
 KBBG
 Sofmil-66
 Sofimes
 American-popcorn
 Muveks
-Takrida
 Koroza-karat
 Ekspo-2000
 Univista
@@ -20,9 +18,10 @@ Ring-logistics
 Car-tuning-parts
 Ivegel
 A1-towers
-Cargo-impex
+Cargoimpex
 Digide
 Ekotop
 EP-commerce
 Sofiiska-banica
 Zora
+Space-design

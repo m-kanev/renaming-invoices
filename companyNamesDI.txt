@@ -6,7 +6,6 @@ LL-group
 Sofimes
 Sofmil-66
 Univista
-EP-commerce
 Digide
 Ring-logistics
 Car-tuning-parts
@@ -14,4 +13,5 @@ Muveks
 Zora
 Ekotop
 Sheri
-Takrida
+Cargoimpex
+KBBG

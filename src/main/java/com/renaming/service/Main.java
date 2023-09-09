@@ -1,19 +1,59 @@
 package com.renaming.service;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class Main {
+    public static void main(String[] args) {
+        String namesDI = "companyNamesDI.txt";
+        String destZipFilePath = "/Users/martinkanev/Documents/DI/DI_copy_07.2023.zip";
+        String sourceFolderPath = "DI copy";
+
+
+        List<String> companyNamesDI = getCompanyNames(namesDI);
+
+        try (ZipOutputStream zos = new ZipOutputStream(Files.newOutputStream(Paths.get(destZipFilePath)))) {
+            File sourceFolder = new File(sourceFolderPath);
+            File[] files = sourceFolder.listFiles();
+            Arrays.sort(files, Comparator.comparing(File::getName));
+
+            if (files != null) {
+                for (int i = 0; i < files.length; i++) {
+                    if (files[i].isFile()) {
+                        String oldName = files[i].getName();
+                        String newName = companyNamesDI.get(i) + "-" + oldName;
+                        File renamedFile = new File(sourceFolder, newName);
+
+                        if (files[i].renameTo(renamedFile)) {
+                            System.out.println(oldName + " renamed to " + newName);
+                        } else {
+                            System.out.println("Failed to rename " + oldName);
+                        }
+
+                        addFileToZip(renamedFile, renamedFile.getName(), zos);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Files renamed and zipped to " + destZipFilePath);
+    }
+
     public static List<String> getCompanyNames(String fileName) {
-        String companyNamesFile = fileName;
         ArrayList<String> namesList = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(companyNamesFile))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 namesList.add(line.trim());
@@ -40,40 +80,5 @@ public class Main {
         zos.closeEntry();
     }
 
-
-    public static void main(String[] args) {
-        String namesDI = "companyNamesInvoices.txt";
-        String destZipFilePath = "C:\\Users\\marti\\Documents\\Invoices/Invoices original 06.2023.zip";
-        String sourceFolderPath = "DI original";
-
-        List<String> companyNamesDI = getCompanyNames(namesDI);
-
-        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(destZipFilePath))) {
-            File sourceFolder = new File(sourceFolderPath);
-            File[] files = sourceFolder.listFiles();
-
-            if (files != null) {
-                for (int i = 0; i < files.length; i++) {
-                    if (files[i].isFile()) {
-                        String oldName = files[i].getName();
-                        String newName = companyNamesDI.get(i) + "-" + oldName;
-                        File renamedFile = new File(sourceFolder, newName);
-
-                        if (files[i].renameTo(renamedFile)) {
-                            System.out.println(oldName + " renamed to " + newName);
-                        } else {
-                            System.out.println("Failed to rename " + oldName);
-                        }
-
-                        addFileToZip(renamedFile, renamedFile.getName(), zos);
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Files renamed and zipped to " + destZipFilePath);
-    }
 }
 
