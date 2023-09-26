@@ -14,9 +14,13 @@ import java.util.zip.ZipOutputStream;
 
 public class Main {
     public static void main(String[] args) {
-        String namesDI = "companyNamesDI.txt";
-        String destZipFilePath = "/Users/martinkanev/Documents/DI/DI_copy_07.2023.zip";
-        String sourceFolderPath = "DI copy";
+        String TYPE = "Invoices";
+        String MODE = "copy";
+        String DATE = "08.2023";
+
+        String namesDI = "companyNames" + TYPE + ".txt";
+        String destZipFilePath = "/Users/martinkanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
+        String sourceFolderPath = "DI " + MODE;
 
 
         List<String> companyNamesDI = getCompanyNames(namesDI);
