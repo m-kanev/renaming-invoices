@@ -14,12 +14,16 @@ import java.util.zip.ZipOutputStream;
 
 public class Main {
     public static void main(String[] args) {
-        String TYPE = "Invoices";
-        String MODE = "copy";
-        String DATE = "08.2023";
+        // Do the DI first and fix martin.kanev depending on the PC
+        String TYPE = "DI";
+//        String TYPE = "Invoices";
+
+//        String MODE = "copy";
+        String MODE = "original";
+        String DATE = "10.2023";
 
         String namesDI = "companyNames" + TYPE + ".txt";
-        String destZipFilePath = "/Users/martinkanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
+        String destZipFilePath = "/Users/martin.kanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
         String sourceFolderPath = "DI " + MODE;
 
 
