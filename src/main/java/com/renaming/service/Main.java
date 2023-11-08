@@ -23,7 +23,8 @@ public class Main {
         String DATE = "10.2023";
 
         String namesDI = "companyNames" + TYPE + ".txt";
-        String destZipFilePath = "/Users/martin.kanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
+        // rename martin.kanev to martinkanev depending on the comp
+        String destZipFilePath = "/Users/martinkanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
         String sourceFolderPath = "DI " + MODE;
 
 
