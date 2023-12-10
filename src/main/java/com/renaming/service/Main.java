@@ -20,8 +20,9 @@ public class Main {
 
 //        String MODE = "copy";
         String MODE = "original";
-        String DATE = "10.2023";
+        String DATE = "12.2023";
 
+        //Don't touch anything here
         String namesDI = "companyNames" + TYPE + ".txt";
         // rename martin.kanev to martinkanev depending on the comp
         String destZipFilePath = "/Users/martinkanev/Documents/" + TYPE + "/" + TYPE + "_" + MODE + "_" + DATE + ".zip";
