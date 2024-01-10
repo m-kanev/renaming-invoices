@@ -3,6 +3,7 @@ Ekspo-2000
 KBBG
 Sofimes
 Sofmil-66
+Univista
 EP-commerce
 Digide
 Ring-logistics
@@ -15,4 +16,3 @@ Avel
 Cargoimpex
 Cargoimpex
 LL-group
-Univista

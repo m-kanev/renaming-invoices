@@ -14,7 +14,6 @@ Transcapital
 Anri-64
 Ring-logistics
 Car-tuning-parts
-Ivegel
 A1-towers
 Cargoimpex
 Digide
@@ -22,3 +21,4 @@ Ekotop
 EP-commerce
 Space-design
 Avel
+Ivegel
