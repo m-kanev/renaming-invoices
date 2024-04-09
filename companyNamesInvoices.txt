@@ -1,5 +1,4 @@
 A1-bulgaria
-Muveks
 EP-invest
 KBBG
 Sofmil-66
@@ -16,11 +15,9 @@ Ring-logistics
 Car-tuning-parts
 A1-towers
 Cargoimpex
-Digide
 Ekotop
 EP-commerce
 Space-design
 Avel
 Ivegel
 Home-of-wool
-Borovets-oil

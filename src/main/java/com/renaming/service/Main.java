@@ -20,7 +20,7 @@ public class Main {
 
 //        String MODE = "copy";
         String MODE = "original";
-        String DATE = "02.2024";
+        String DATE = "03.2024";
 
         //Don't touch anything here
         String namesDI = "companyNames" + TYPE + ".txt";
