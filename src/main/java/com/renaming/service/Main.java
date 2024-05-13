@@ -15,12 +15,12 @@ import java.util.zip.ZipOutputStream;
 public class Main {
     public static void main(String[] args) {
         // Do the DI first and fix martin.kanev depending on the PC
-        String TYPE = "DI";
-//        String TYPE = "Invoices";
+//        String TYPE = "DI";
+        String TYPE = "Invoices";
 
 //        String MODE = "copy";
         String MODE = "original";
-        String DATE = "03.2024";
+        String DATE = "04.2024";
 
         //Don't touch anything here
         String namesDI = "companyNames" + TYPE + ".txt";
