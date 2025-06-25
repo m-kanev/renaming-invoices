@@ -18,9 +18,9 @@ public class Main {
 //        String TYPE = "DI";
         String TYPE = "Invoices";
 
-//        String MODE = "copy";
-        String MODE = "original";
-        String DATE = "08.2024";
+        String MODE = "copy";
+//        String MODE = "original";
+        String DATE = "05.2025";
 
         //Don't touch anything here
         String namesDI = "companyNames" + TYPE + ".txt";
